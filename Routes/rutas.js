@@ -23,4 +23,4 @@ rutasPersonalizadas.get('/hoteleslospolloshermanos/reservas', controladorReserva
 rutasPersonalizadas.get('/hoteleslospolloshermanos/reserva/:idReserva', controladorReserva.buscarReservaPorId);
 rutasPersonalizadas.post('/hoteleslospolloshermanos/reserva', controladorReserva.registrarReserva);
 rutasPersonalizadas.put('/hoteleslospolloshermanos/reserva/:idReserva', controladorReserva.editarReserva);
-rutasPersonalizadas.put('/hoteleslospolloshermanos/reservas', controladorReserva.eliminaReserva);
+rutasPersonalizadas.delete('/hoteleslospolloshermanos/reserva/:idReserva', controladorReserva.eliminaReserva);

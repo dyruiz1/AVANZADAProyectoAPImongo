@@ -117,7 +117,7 @@ export class ControladorReservas {
     try {
       await objetoServicioReserva.eliminaReserva(id),
       response.status(200).json({
-        mensaje: 'Exito en la consulta ' + id,
+        mensaje: 'Exito eliminando ' + id,
         datos:null
       });
     } catch (error) {
