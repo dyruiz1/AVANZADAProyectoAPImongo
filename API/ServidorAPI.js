@@ -1,7 +1,9 @@
 import express from 'express'; // esta descargado de forma global
 import { rutasPersonalizadas } from '../Routes/rutas.js';
 import { conectarConMongo } from '../Database/conexion.js';
+import cors from 'cors'
 
+// protocolo para que dps servidores back y fron se conecten
 export class ServidorAPI {
   constructor() {
     // app es la Variables que almacena toda la funcionalidad de Express
@@ -28,6 +30,7 @@ export class ServidorAPI {
   }
 
   activarBody() {
+    this.app.use(cors())
     this.app.use(express.json());
   }
 }
