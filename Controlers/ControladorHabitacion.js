@@ -86,4 +86,23 @@ export class ControladorHabitacion {
       });
     }
   }
+
+  async eliminaHabitacion(request, response) {
+    // response.send('Estoy buscando una Reservas por id desde controlador');
+    // una peticion tiene los parametros que van por el body, y el id los cuales viaja por URL
+    let id = request.params.idHabitacion;
+    let objetoServicioHabitacion = new ServicioHabitacion();
+    try {
+      await objetoServicioHabitacion.eliminaHabitacion(id),
+        response.status(200).json({
+          mensaje: 'Exito eliminando ' + id,
+          datos: null,
+        });
+    } catch (error) {
+      response.status(400).json({
+        mensaje: 'Error en la consulta ' + error,
+        datos: null,
+      });
+    }
+  }
 }

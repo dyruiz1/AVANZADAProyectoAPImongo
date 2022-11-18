@@ -18,6 +18,7 @@ rutasPersonalizadas.get('/hoteleslospolloshermanos/habitaciones', controladorHab
 rutasPersonalizadas.get('/hoteleslospolloshermanos/habitacion/:idHabitacion', controladorHabitacion.buscarHabitacionPorId);
 rutasPersonalizadas.post('/hoteleslospolloshermanos/habitacion', controladorHabitacion.registrarHabitacion);
 rutasPersonalizadas.put('/hoteleslospolloshermanos/habitacion/:idHabitacion', controladorHabitacion.editarHabitacion);
+rutasPersonalizadas.delete('/hoteleslospolloshermanos/habitacion/:idHabitacion', controladorHabitacion.eliminaHabitacion );
 
 rutasPersonalizadas.get('/hoteleslospolloshermanos/reservas', controladorReserva.buscarReservas);
 rutasPersonalizadas.get('/hoteleslospolloshermanos/reserva/:idReserva', controladorReserva.buscarReservaPorId);
